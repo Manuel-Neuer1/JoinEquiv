@@ -61,4 +61,19 @@ This section details the bugs and unsafe implementations identified by our frame
 *   **[Percona #535](https://perconadev.atlassian.net/browse/DISTMYSQL-535)**
 
 # Getting Started JoinEquiv
+Minimum Requirements:
+* Java 11 or above
+* [Maven](https://maven.apache.org/)
+
+Before using JoinEquiv, you need to download the repository, then follow these commands to create the JAR and start JoinEquiv
+```shell
+unzip joinequiv.zip
+cd joinequiv
+mvn clean package -DskipTests
+cd target
+java -jar joinequiv-*.jar --num-threads 4 --username root --password your_password --host <database_host> --port <database_listen_port> <database_name> --oracle JOIN
+# e.g.: java -jar joinequiv-*.jar --num-threads 4  --username root --password 1234 --host localhost --port 3306 mysql --oracle JOIN
+# e.g.: java -jar joinequiv-*.jar --num-threads 4  --username root --password 1234 --host localhost --port 4000 tidb --oracle JOIN
+# e.g.: java -jar joinequiv-*.jar --num-threads 4  --username root --password 1234 --host localhost --port 3309 percona --oracle JOIN
+```
 
