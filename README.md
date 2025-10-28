@@ -64,10 +64,11 @@ This section details the bugs and unsafe implementations identified by our frame
 Minimum Requirements:
 * Java 11 or above
 * [Maven](https://maven.apache.org/)
+* Ubuntu 20.04.6 LTS or above
 
-Before using JoinEquiv, you need to download the repository, then follow these commands to create the JAR and start JoinEquiv
+Before using JoinEquiv, you need to download the repository to obtain JoinEquiv-13CB.zip, then follow these commands to create the JAR and start JoinEquiv
 ```shell
-unzip joinequiv.zip
+unzip JoinEquiv-13CB.zip
 cd joinequiv
 mvn clean package -DskipTests
 cd target
