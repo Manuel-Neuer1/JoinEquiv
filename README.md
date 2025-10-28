@@ -65,6 +65,9 @@ Minimum Requirements:
 * Java 11 or above
 * [Maven](https://maven.apache.org/)
 * Ubuntu 20.04.6 LTS or above
+* MySQL
+* Percona
+* TiDB
 
 Before using JoinEquiv, you need to download the repository to obtain JoinEquiv-13CB.zip, then follow these commands to create the JAR and start JoinEquiv
 ```shell
