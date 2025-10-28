@@ -1,0 +1,7 @@
+joinequiv.datafusion.DataFusionProvider
+joinequiv.mariadb.MariaDBProvider
+joinequiv.mysql.MySQLProvider
+joinequiv.oceanbase.OceanBaseProvider
+joinequiv.percona.PerconaProvider
+joinequiv.sqlite3.SQLite3Provider
+joinequiv.tidb.TiDBProvider

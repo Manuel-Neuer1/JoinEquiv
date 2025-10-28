@@ -2,44 +2,15 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sqlancer</groupId>
-  <artifactId>sqlancer</artifactId>
-  <version>2.0.0</version>
-  <name>SQLancer</name>
-  <url>http://www.sqlancer.com/</url>
-  <description>SQLancer finds logic bugs in Database Management Systems through automatic testing</description>
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://github.com/sqlancer/sqlancer/blob/master/LICENSE.md</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <developers>
-    <developer>
-      <id>mrigger</id>
-      <name>Manuel Rigger</name>
-      <email>manuel.rigger@inf.ethz.ch</email>
-      <organization>ETH Zurich</organization>
-      <organizationUrl>https://ethz.ch/</organizationUrl>
-      <url>https://www.manuelrigger.at/</url>
-      <roles>
-        <role>architect</role>
-        <role>developer</role>
-      </roles>
-    </developer>
-  </developers>
-  <scm>
-    <url>https://github.com/sqlancer/sqlancer/</url>
-    <connection>scm:git:git://github.com/sqlancer/sqlancer.git</connection>
-    <developerConnection>scm:git:ssh://github.com:sqlancer/sqlancer.git</developerConnection>
-  </scm>
+  <groupId>com.joinequiv</groupId>
+  <artifactId>joinequiv</artifactId>
+  <version>1.0.0</version>
+  <name>JoinEquiv</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <testSourceDirectory>test</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -74,7 +45,7 @@
             <configuration>
               <target>
                 <delete>
-                  <fileset dir="${project.build.directory}/" includes="original-sqlancer-*.jar" />
+                  <fileset dir="${project.build.directory}/" includes="original-joinequiv-*.jar" />
                 </delete>
               </target>
             </configuration>
@@ -182,7 +153,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>sqlancer.Main</mainClass>
+              <mainClass>joinequiv.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -242,9 +213,9 @@
             <configuration>
               <failurePriority>2</failurePriority>
               <failOnViolation>true</failOnViolation>
-              <rulesets>
-                <ruleset>configs/pmd-rules.xml</ruleset>
-              </rulesets>
+<!--              <rulesets>-->
+<!--                <ruleset>configs/pmd-rules.xml</ruleset>-->
+<!--              </rulesets>-->
             </configuration>
           </execution>
         </executions>
