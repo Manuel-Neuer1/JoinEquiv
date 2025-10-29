@@ -60,14 +60,66 @@ This section details the bugs and unsafe implementations identified by our frame
 
 *   **[Percona #535](https://perconadev.atlassian.net/browse/DISTMYSQL-535)**
 
-# Getting Started JoinEquiv
-Minimum Requirements:
+# 🚀 Getting Started JoinEquiv
+## 🧩 Minimum Requirements
 * Java 11 or above
 * [Maven](https://maven.apache.org/)
 * Ubuntu 20.04.6 LTS or above
-* MySQL
-* Percona
-* TiDB
+* [Docker](https://docs.docker.com/get-docker/) (recommended for setting up database environments)
+
+## 🐳 Recommended Setup: Run Databases via Docker
+We recommend using **Docker** to quickly deploy the tested DBMSs used by JoinEquiv.  
+The following examples demonstrate how to pull and run **MySQL**, **Percona**, and **TiDB** using official Docker images.
+
+### 🐬 MySQL
+- **Docker Hub:** [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
+
+```bash
+# Pull the MySQL 9.2.0 image
+docker pull mysql:9.2.0
+
+# Run the MySQL container
+docker run -d \
+  --name mysql920 \
+  -e MYSQL_ROOT_PASSWORD=1234 \
+  -p 3306:3306 \
+  mysql:9.2.0
+run --name my-mysql -e MYSQL_ROOT_PASSWORD=1234 -p 3306:3306 -d mysql:latest
+```
+This will start a MySQL server accessible at localhost:3306 with username root and password 1234.
+
+### 🐬 Percona
+- **Docker Hub:** [https://hub.docker.com/r/percona/percona-server](https://hub.docker.com/r/percona/percona-server)
+
+```bash
+# Pull the Percona Server 8.4.5 image
+docker pull percona/percona-server:8.4.5
+
+# Run the Percona container
+docker run -d \
+  --name percona845 \
+  -e MYSQL_ROOT_PASSWORD=1234 \
+  -p 3309:3306 \
+  percona/percona-server:8.4.5
+```
+This will start a Percona Server instance accessible at localhost:3309 with username root and password 1234
+
+### 🐬 TiDB
+- **Docker Hub:** [https://hub.docker.com/r/pingcap/tidb](https://hub.docker.com/r/pingcap/tidb)
+
+```bash
+# Pull the TiDB 7.5.1 image
+docker pull pingcap/tidb:v7.5.1
+
+# Run the TiDB container
+docker run -d \
+  --name tidb751 \
+  -e MYSQL_ROOT_PASSWORD=1234 \
+  -p 4000:4000 \
+  pingcap/tidb:v7.5.1
+```
+This will start a TiDB instance accessible at localhost:4000 with username root and password 1234
+
 
 Before using JoinEquiv, you need to download the repository to obtain JoinEquiv-13CB.zip, then follow these commands to create the JAR and start JoinEquiv
 ```shell
