@@ -2,7 +2,7 @@
 
 # Bug List
 
-This section details the bugs and unsafe implementations identified by our framework, as referenced in Table 1 of the paper. Each reported issue includes a link to the corresponding bug report or GitHub issue where available.
+This section details the bugs identified by our framework JoinEquiv. Each reported issue includes a link to the corresponding bug report or GitHub issue where available.
 
 ### MySQL Bugs
 
