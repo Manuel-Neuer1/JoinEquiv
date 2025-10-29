@@ -132,6 +132,9 @@ java -jar joinequiv-*.jar --num-threads 4 --username root --password your_passwo
 # e.g.: java -jar joinequiv-*.jar --num-threads 4  --username root --password 1234 --host localhost --port 4000 tidb --oracle JOIN
 # e.g.: java -jar joinequiv-*.jar --num-threads 4  --username root --password 1234 --host localhost --port 3309 percona --oracle JOIN
 ```
-JoinEquiv stores logs in the target/logs subdirectory, results in every SQL statement that is sent to the DBMS being logged. The corresponding file names are postfixed with -cur.log. In addition, if JoinEquiv detects a logic bug(Sometimes joinEquiv throws an exception because the generated sql statement asserts incorrectly, which is not a DBMS bug.), it creates a file with the extension .log, in which the statements to reproduce the bug are logged, including only the last query that was executed along with the other statements to set up the database state.
+JoinEquiv stores logs in the target/logs subdirectory, results in every SQL statement that is sent to the DBMS being logged. The corresponding file names are postfixed with `-cur.log`. In addition, if JoinEquiv detects a logic bug(Sometimes joinEquiv throws an exception because the generated sql statement asserts incorrectly, which is not a DBMS bug.), it creates a file with the extension `.log`, in which the statements to reproduce the bug are logged, including only the last query that was executed along with the other statements to set up the database state.
 
-Alternatively, you can run the script file ** . /findbug <dbms> ** to automatically detect the full path of the .log where JoinEquiv found the bug.
+Alternatively, you can run the script file `./findbug.sh <dbms>` to automatically detect the full path of the `.log` files where JoinEquiv found potential bugs.
+```bash
+./findbug <dbms> # e.g., ./findbug mysql
+```
