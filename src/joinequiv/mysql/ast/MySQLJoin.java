@@ -63,6 +63,7 @@ public class MySQLJoin implements MySQLExpression, Join<MySQLExpression, MySQLTa
             // Natural join is incompatible with other joins
             // because it needs unique column names
             // while other joins will produce duplicate column names
+            nrJoinClauses = 1;
             if (nrJoinClauses > 1) {
                 options.remove(JoinType.NATURAL);
             }
