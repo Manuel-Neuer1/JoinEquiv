@@ -60,6 +60,11 @@ This section details the bugs identified by our framework JoinEquiv. Each report
 
 *   **[Percona #535](https://perconadev.atlassian.net/browse/DISTMYSQL-535)**
 
+### DuckDB Bugs
+*   **[DuckDB Bug #20483](https://github.com/duckdb/duckdb/issues/20483) Fixed in DuckDB v1.4.3**
+  
+*   **[DuckDB Bug #20486](https://github.com/duckdb/duckdb/issues/20486) Fixed in DuckDB v1.4.3**
+*   
 # 🚀 Getting Started JoinEquiv
 ## 🧩 Minimum Requirements
 * Java 11 or above
