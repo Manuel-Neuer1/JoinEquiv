@@ -64,6 +64,8 @@ This section details the bugs identified by our framework JoinEquiv. Each report
 *   **[DuckDB Bug #20483](https://github.com/duckdb/duckdb/issues/20483) Fixed in DuckDB v1.4.3**
   
 *   **[DuckDB Bug #20486](https://github.com/duckdb/duckdb/issues/20486) Fixed in DuckDB v1.4.3**
+
+*   **[DuckDB Bug #20608](https://github.com/duckdb/duckdb/issues/20608) Fixed in [Issue #20608: EXCEPT Window Collations](https://github.com/duckdb/duckdb/pull/20645)**
 *   
 # 🚀 Getting Started JoinEquiv
 ## 🧩 Minimum Requirements
